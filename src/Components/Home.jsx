@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { LuSendHorizonal } from "react-icons/lu";
 import { Box, Button, Container, HStack, Input, Text, VStack } from "@chakra-ui/react";
 import Messages from './Messages';
-import { color } from 'framer-motion';
-import { hover } from '@testing-library/user-event/dist/hover';
+import { app } from '../Configs/Firebase';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
-/* bg="url(https://img.freepik.com/premium-vector/white-heart-love-confettis-valentine-s-day-vignette-exquisite-background-falling-stitched-paper-hearts-confetti-white-background-extra-vector-illustration_174187-6057.jpg)" */
+const auth=getAuth(app);
+const firestore=getFirestore(app);
+
+
 
 const Home = () => {
 
