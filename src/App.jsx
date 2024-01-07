@@ -45,10 +45,12 @@ function App() {
             }
           )
         })
-        console.log(temp);
         setMessages(temp);
       }
     })
+    return ()=>{
+      unsubscribe();
+    }
   }, [user])
 
 
